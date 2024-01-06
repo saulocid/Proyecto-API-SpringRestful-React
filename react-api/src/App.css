@@ -1,0 +1,38 @@
+form,
+#root {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    gap: 25px;
+}
+
+th,
+td {
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    font-size: 1.5rem;
+    color: blueviolet;
+    filter: drop-shadow(0 0 2px white);
+    transition: 300ms;
+}
+
+a:not(:hover){
+    transition: 300ms;
+}
+
+.X{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
