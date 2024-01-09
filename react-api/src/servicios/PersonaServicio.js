@@ -10,17 +10,19 @@ export async function listarPersonas() {
 
 export async function savePersona(persona) {
     try {
-        await fetch('http://localhost:8080/personas/guardar',{
-            body: JSON.stringify(persona),
-            headers:{
-                "Content-type": "application/json"
-            },
-            method: "POST"
-        })
+      const response = await fetch('http://localhost:8080/personas/guardar', persona, {
+        headers: {
+          'Content-Type': 'application/json',
+        //   Authorization: 'Basic ' + btoa('admin:admin'),
+        },
+      });
+  
+      // Puedes manejar la respuesta si es necesario
+      console.log('Respuesta del servidor:', response.data)
     } catch (error) {
-        console.log(error)
+      console.error('Error al enviar la solicitud:', error)
     }
-}
+  }
 
 export async function deletePersona(id) {
     try {
